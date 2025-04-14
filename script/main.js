@@ -1,12 +1,21 @@
-// Automatically play music and start animation on page load
+// trigger to play music in the background with sweetalert
 window.addEventListener('load', () => {
-    const song = document.querySelector('.song');
-    if (song) {
-        song.play().catch((e) => {
-            console.warn('Autoplay failed due to browser policy:', e);
-        });
-    }
-    animationTimeline();
+    Swal.fire({
+        title: 'Do you want to play music in the background?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.querySelector('.song').play();
+            animationTimeline();
+        } else {
+            animationTimeline();
+        }
+    });
 });
 
 
