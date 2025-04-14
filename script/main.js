@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     Swal.fire({
         title: '💚🫂❤️',
         confirmButtonColor: '#3085d6',
-        confirmButtonText: 'Yes',
+        confirmButtonText: 'Music 🎶',
     }).then((result) => {
         if (result.isConfirmed) {
             document.querySelector('.song').play();
