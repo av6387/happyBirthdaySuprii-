@@ -293,7 +293,7 @@ body {
 }
 
 .hat {
-      transform: rotate(-45deg);
+      transform: rotate(-60deg);
       transform-origin: bottom left; /* optional: adjust based on your design */
   }
   
